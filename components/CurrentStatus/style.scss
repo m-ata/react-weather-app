@@ -34,6 +34,7 @@
             &__temp{
                 font-size: 5rem;
                 margin: 0;
+                font-weight: 500;
                 span{
                     font-size: 3rem;
                 }
@@ -50,7 +51,10 @@
     }
 }
 .current-weather{
-    padding: 10px;
+    padding: 30px;
+    background-color: #f7f7f7;
+    border-radius: 1rem;
+    margin-top: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     h2{
         font-size: 2rem;
@@ -70,6 +74,9 @@
             width: 40%;
             justify-content: space-between;
             font-size: 20px;
+            transform: skew(-10deg);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 10px 20px;
         }
     }
 }
