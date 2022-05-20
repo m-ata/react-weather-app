@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    &__logo{
+        font-size: 2rem;
+    }
+    &__searchBar{
+        border-radius: 20px;
+        border: 2px solid gray;
+        padding: 4px 12px;
+        input{
+            border: none;
+            outline: none;
+        }
+    }
+    &__modesButton{
+        .temperatureConverter{
+            font-size: 1rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        button{
+            border: none;
+            background: none;
+            font-size: 1rem;
+        }
+    }
+}
