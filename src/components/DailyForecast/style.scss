@@ -1,0 +1,49 @@
+.daily-item-container{
+    margin: 30px;
+    .daily-item{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f5f5f5;
+        border-radius: 15px;
+        margin: 5px;
+        padding: 8px 20px;
+        transition: background-color .25s ease;
+        box-shadow: 0 5px 10px 0 hsl(0deg 0% 88% / 67%);
+        .text-1{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+            .icon{
+                font-size: 1.5rem;
+            }
+        }
+        .text-2{
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            .min-max{
+                color: #757575;
+            }
+        }
+
+    }
+    .daily-details{
+        margin: 15px;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        &__item{
+            font-size: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 45%;
+        }
+    }
+}

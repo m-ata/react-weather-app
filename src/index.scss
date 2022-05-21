@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+@media only screen and (max-width: 1024px){
+    .current-weather{
+        width: 100%;
+        .current-weather-details__items {
+            width: 100%;
+        }
+    }
+    .currentStatus{
+        flex-direction: row;
+        width: 100%;
+    }
+}

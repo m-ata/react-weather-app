@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px 8px;
+    border-bottom: 1px solid #b1b1b1;
+    gap: 10px;
+    &__logo{
+        font-size: 2rem;
+        -webkit-animation: rotation 2s infinite linear;
+    }
+    &__searchBar{
+        border-radius: 20px;
+        border: 2px solid rgb(200, 200, 200);
+        padding: 4px 12px;
+        input{
+            border: none;
+            outline: none;
+            background: none;
+        }
+    }
+    &__modesButton{
+        .temperatureConverter{
+            font-size: 1rem;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+        button{
+            border: none;
+            background: none;
+            font-size: 1rem;
+        }
+    }
+}
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
