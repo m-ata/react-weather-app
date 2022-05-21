@@ -1,19 +1,23 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     padding: 4px 8px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-bottom: 1px solid #b1b1b1;
+    gap: 10px;
     &__logo{
         font-size: 2rem;
+        -webkit-animation: rotation 2s infinite linear;
     }
     &__searchBar{
         border-radius: 20px;
-        border: 2px solid gray;
+        border: 2px solid rgb(200, 200, 200);
         padding: 4px 12px;
         input{
             border: none;
             outline: none;
+            background: none;
         }
     }
     &__modesButton{
@@ -27,5 +31,13 @@
             background: none;
             font-size: 1rem;
         }
+    }
+}
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
     }
 }

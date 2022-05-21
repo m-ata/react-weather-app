@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.scss'
 const Header = () => {
+    const [darkMode, setDarkMode] = useState();
     return (
         <div className='header'>
             <span className='header__logo'>🌎</span>
@@ -11,7 +12,9 @@ const Header = () => {
             <span className='header__modesButton'>
                 <span className='temperatureConverter' onClick={() => {}}>°C</span>
                 <span className='temperatureConverter' onClick={() => {}}>°F</span>
-                <button className='darkModeButton' onClick={() => {}}>🌙 / 🌞</button>
+                <button className='darkModeButton' onClick={() => {setDarkMode(!darkMode)}}>
+                    {darkMode === true ? '🌙': '🌞'}
+                    </button>
             </span>
         </div>
      );

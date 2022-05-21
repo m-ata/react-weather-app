@@ -1,8 +1,10 @@
 import React from 'react';
+import CurrentWeatherDetails from './CurrentWeatherDetails';
 import './style.scss';
 const CurrentTemp = () => {
     let currentDate = new Date();
     return (
+    <div className='container'>
         <div className='currentStatus'>
             <div className='currentStatus__location'>
                 <h1 className='currentStatus__location__title'>Location</h1>
@@ -18,6 +20,8 @@ const CurrentTemp = () => {
                 </span>
             </div>
         </div>
+        <CurrentWeatherDetails />
+    </div>
      );
 }
 export default CurrentTemp;
