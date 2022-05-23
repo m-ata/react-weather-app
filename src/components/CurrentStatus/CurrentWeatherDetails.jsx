@@ -1,31 +1,31 @@
 import React from 'react';
 
-const CurrentWeatherDetails = () => {
+const CurrentWeatherDetails = ( {CurrentWeatherDetails , locationName } ) => {
     return (
     <div className='current-weather'>
-        <h2>Weather Today in Islamabad, IS</h2>
-        <div class="current-weather-details">
-            <div class="current-weather-details__items">
-                <label><span className='current-weather-details__items__icon'>💦</span> Rain:</label>
-                <label>0.00%</label>
+        <h2>Weather Today in {locationName}, IS</h2>
+        <div className="current-weather-details">
+            <div className="current-weather-details__items">
+                <label><span className='current-weather-details__items__icon'>☁️</span> Cloud:</label>
+                <label>{CurrentWeatherDetails?.cloud} %</label>
             </div>
-            <div class="current-weather-details__items">
+            <div className="current-weather-details__items">
                 <label><span className='current-weather-details__items__icon'>💨</span> Pressure:</label>
-                <label>1020hPa</label>
+                <label>{CurrentWeatherDetails?.pressure_mb}hPa</label>
             </div>
-            <div class="current-weather-details__items">
+            <div className="current-weather-details__items">
                 <label>
                     <span className='current-weather-details__items__icon'>💧</span> Humidity:
                     </label>
-                <label>61%</label>
+                <label>{CurrentWeatherDetails?.humidity} %</label>
             </div>
-            <div class="current-weather-details__items">
+            <div className="current-weather-details__items">
                 <label><span className='current-weather-details__items__icon'>👁️</span> Visibility:</label>
-                <label>10 km</label>
+                <label>{CurrentWeatherDetails?.vis_km} km</label>
             </div>
-            <div class="current-weather-details__items">
+            <div className="current-weather-details__items">
                 <label><span className='current-weather-details__items__icon'>🌪️</span> Wind speed:</label>
-                <label>8 m/s</label>
+                <label>{CurrentWeatherDetails?.wind_mph} m/h</label>
             </div>
         </div>
     </div>
