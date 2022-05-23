@@ -11,8 +11,8 @@ const App = () => {
         <div className="main-container">
             <Header />
             <CurrentTemp currentWeather={WeatherData} />
-            <HourlyCards forecastDay={WeatherData?.forecast?.forecastday} />
-            <DailyForecast />
+            <HourlyCards forecastDay= {WeatherData?.forecast?.forecastday || []} />
+            <DailyForecast forecastDay = {WeatherData?.forecast?.forecastday || []} />
         </div>
     );
 }
