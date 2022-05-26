@@ -27,7 +27,9 @@ export const useWeather = (location) => {
     if (coordinates?.long && coordinates?.lat) {
       axios
         .get(
-          `http://api.weatherapi.com/v1/forecast.json?key=19938388dec14d8d998105335222105&q=lat=${coordinates.lat}&lon=${coordinates.long}&days=2&aqi=no&alerts=no`
+          `http://api.weatherapi.com/v1/forecast.json?key=65dc5293c5214886818183623222505&q=lat=${coordinates.lat}&lon=${coordinates.long}&days=7&aqi=no&alerts=no`
+          // 'http://api.weatherapi.com/v1/forecast.json?key=65dc5293c5214886818183623222505&q=karachi&days=7&aqi=no&alerts=no'
+
         )
         .then((response) => {
           // handle success

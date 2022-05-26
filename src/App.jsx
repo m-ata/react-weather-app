@@ -6,7 +6,6 @@ import HourlyCards from "./components/HourlyCards/HourlyCards";
 import { useWeather } from "./hooks/useWeather";
 const App = () => {
     const WeatherData = useWeather();
-    console.log(WeatherData?.forecast);
     return (
         <div className="main-container">
             <Header />
