@@ -4,7 +4,6 @@ import "./style.scss";
 const CurrentTemp = ({ currentWeather, WeatherImages }) => {
   const { location, current } = currentWeather;
 
-
   console.log(current);
   const getWeatherBackground = () => {
     const background = WeatherImages.find(
@@ -13,7 +12,10 @@ const CurrentTemp = ({ currentWeather, WeatherImages }) => {
     return background?.background;
   };
   return (
-    <div style={{backgroundImage: `url( ${getWeatherBackground()})`}} className="weatherBackground">
+    <div
+      style={{ backgroundImage: `url( ${getWeatherBackground()})` }}
+      className="weatherBackground"
+    >
       <div className="container">
         <div className="currentStatus">
           <div className="currentStatus__location">
