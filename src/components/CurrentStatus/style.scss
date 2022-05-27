@@ -1,9 +1,17 @@
+.weatherBackground{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 .container {
+    background-color: #00000085;
+    color: whitesmoke;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 30px;
+}
 }
     .currentStatus{
         display: flex;
@@ -24,7 +32,7 @@
             }
             &__name{
                 font-size: 1.5rem;
-                color: #6a6a6a;
+                color: #d8d8d8;
                 margin: 0;
 
             }
@@ -53,11 +61,11 @@
                 }
                 &__feelLike{
                     font-size: small;
-                    color: #6a6a6a;
+                    color: #d8d8d8;
                 }
                 &__description{
                     font-size: small;
-                    color: #6a6a6a;
+                    color: #d8d8d8;
                 }
             }
         }
@@ -65,10 +73,10 @@
     .current-weather{
         width: 60%;
         padding: 30px;
-        // background-color: #f7f7f7;
+        background-color: #f7f7f736;
         border-radius: 1rem;
         margin-top: 20px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        box-shadow: rgba(29, 29, 29, 0.649) 0px 2px 8px 0px;
         h2{
             font-size: 1.3rem;
             margin-bottom: 4rem;
@@ -88,7 +96,7 @@
                 justify-content: space-between;
                 font-size: 0.8rem;
                 transform: skew(-10deg);
-                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                box-shadow: rgb(0 0 0 / 59%) 0px 7px 29px 0px;
                 padding: 10px 20px;
             }
         }
