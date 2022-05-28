@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./style.scss";
 const HourlyCards = ({ forecastDay }) => {
   const [days] = forecastDay;
-  // console.log("day1 ===>", days?.hour);
 
   const getTime = (splitTime) => {
     const time = splitTime.split(" ");

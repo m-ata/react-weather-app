@@ -4,7 +4,6 @@ import "./style.scss";
 const CurrentTemp = ({ currentWeather, WeatherImages }) => {
   const { location, current } = currentWeather;
 
-  console.log(current);
   const getWeatherBackground = () => {
     const background = WeatherImages.find(
       (item) => item?.code === current?.condition?.code
