@@ -6,6 +6,19 @@ body {
     margin: 0;
     padding: 0;
 }
+.container {
+    margin: 30px;
+    padding: 8px 14px;
+}
+.button {
+    border:none;
+    border-radius: 16px;
+    cursor: pointer;
+    margin: 5px;
+    padding: 8px 14px;
+    background-color: #1b4de4;
+    color: #fff;
+}
 
 @media only screen and (max-width: 1024px) {
     .current-weather {

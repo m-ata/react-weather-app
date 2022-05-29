@@ -15,7 +15,7 @@ const CurrentTemp = ({ currentWeather, WeatherImages }) => {
       style={{ backgroundImage: `url( ${getWeatherBackground()})` }}
       className="weatherBackground"
     >
-      <div className="container">
+      <div className="titlesection-container">
         <div className="currentStatus">
           <div className="currentStatus__location">
             <h1 className="currentStatus__location__title">{location?.name}</h1>

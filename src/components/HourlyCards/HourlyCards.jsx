@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./style.scss";
 const HourlyCards = ({ forecastDay }) => {
   const [days] = forecastDay;
@@ -9,8 +9,6 @@ const HourlyCards = ({ forecastDay }) => {
   };
 
   return (
-    <div className="hourly-container">
-      <h2>Hourly Forecast</h2>
       <div className="hourly-card">
         {days?.hour.map((data, index) => (
           <div className="hourly-item" key={index}>
@@ -20,7 +18,6 @@ const HourlyCards = ({ forecastDay }) => {
           </div>
         ))}
       </div>
-    </div>
   );
 };
 
