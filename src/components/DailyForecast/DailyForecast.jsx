@@ -1,18 +1,15 @@
 import moment from "moment";
-import React, { useState } from "react";
+import React from "react";
 import Collapsible from 'react-collapsible';
 import "./style.scss";
 const DailyForecast = ({ forecastDay }) => {
-  const [openDailyDetails, setOpenDailyDetails] = useState(false);
-  // console.log( getDayFormat( forecastDay[0]?.date ));
   const getDayFormat = (getDate) => {
     const day = moment(getDate, "YYYY-MM-DD");
     return day.format("dddd");
   };
 
   return (
-    <div className="daily-item-container">
-      <h2>Daily Forecast</h2>
+      <>
       {forecastDay.map((day, index) => (
         <Collapsible key={index} trigger={
           <div className="daily-item">
@@ -66,8 +63,7 @@ const DailyForecast = ({ forecastDay }) => {
              </div>
        </Collapsible>
       ))}
-
-    </div>
+    </>
   );
 };
 

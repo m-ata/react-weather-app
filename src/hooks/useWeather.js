@@ -1,11 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { setWeatherData } from "../redux/slices/weather.slice";
 
 export const useWeather = (location) => {
   const apikey = "65dc5293c5214886818183623222505";
 
   const [coordinates, setCoordinates] = useState(location);
-  const [weather, setWeather] = useState([]);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!location) {
@@ -32,7 +35,7 @@ export const useWeather = (location) => {
         )
         .then((response) => {
           // handle success
-          setWeather(response.data);
+          dispatch(setWeatherData(response.data));
         })
         .catch(function (error) {
           // handle error
@@ -41,5 +44,4 @@ export const useWeather = (location) => {
     }
   }, [coordinates]);
 
-  return weather;
 };
