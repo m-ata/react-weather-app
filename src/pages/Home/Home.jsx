@@ -6,11 +6,9 @@ import CurrentTemp from "../../components/CurrentStatus/CurrentTemp";
 import DailyForecast from "../../components/DailyForecast/DailyForecast";
 import Header from "../../components/Header/Header";
 import HourlyCards from "../../components/HourlyCards/HourlyCards";
-// import { useWeather } from "../../hooks/useWeather";
 import WeatherBackgroundImages from "../../utils/backgroundImages.json";
 const Home = () => {
   const WeatherData = useSelector(state => state.weather);
-
   return (
     <div className="main-container">
       <Header />

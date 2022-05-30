@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
+import { useDispatch } from 'react-redux';
+import { setTermperature } from '../../redux/slices/temperature.slice';
 import './style.scss'
 const Header = () => {
     const [darkMode, setDarkMode] = useState();
+    const dispatch = useDispatch()
     return (
         <div className='header'>
             <span className='header__logo'>🌎</span>
@@ -10,11 +13,11 @@ const Header = () => {
                 <span>🔎</span>
             </span>
             <span className='header__modesButton'>
-                <span className='temperatureConverter' onClick={() => {}}>°C</span>
-                <span className='temperatureConverter' onClick={() => {}}>°F</span>
+                <button className='temperatureConverter' onClick={() => { dispatch(setTermperature("centigrade"))}}>°C</button>
+                <button className='temperatureConverter' onClick={() => { dispatch(setTermperature("fahrenheit"))}}>°F</button>
                 <button className='darkModeButton' onClick={() => {setDarkMode(!darkMode)}}>
                     {darkMode === true ? '🌙': '🌞'}
-                    </button>
+                </button>
             </span>
         </div>
      );
