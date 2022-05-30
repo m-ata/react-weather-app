@@ -19,7 +19,7 @@ const HourlyForecast = () => {
     <div className="hourly-container">
       <div className="title">
         <h2>
-          Hourly Weatder - <span className="title-location">{location?.name}</span>
+          Hourly Weather - <span className="title-location">{location?.name}</span>
         </h2>
         <p>As of {getTime(`${location?.localtime}`)} PKT</p>
       </div>
