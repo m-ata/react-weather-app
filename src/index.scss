@@ -22,41 +22,53 @@ body {
 .hourly-container{
     margin: 8px 50px;
     .hours-section{
-        margin: 8px 50px;
+        margin: 30px 50px;
         &__acordion{
             margin: 5px 20px;
         }
         .accordion{
+            background-color: #f5f5f5;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            margin: 5px;
             justify-content: space-between;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            padding: 12px 24px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 4px 15px;
             border-radius: 15px;
             color: rgb(75, 75, 75);
 
             &__text1{
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                width: 50%;
+                gap: 6rem;
                 .temp{
                     font-weight: bold;
                     font-size:16px;
                 }
+                .title{
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    img{
+                        width: 3rem;
+                    }
+                }
+
             }
             &__text2{
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                width: 40%;
-                .dropdown-icon{
-                    font-weight: 500;
-                    font-size: 24px;
-                }
+                justify-content: end;
+                gap: 3rem;
+                font-size: 14px;
+
 
             }
-
+            .dropdown-icon{
+                font-weight: 600;
+                font-size: 18px;
+            }
         }
         .accordion:hover{
             .dropdown-icon{
@@ -66,17 +78,27 @@ body {
         .accordion__details{
             &__section{
                 display: flex;
-                margin: 5px;
-                padding: 10px;
-                border-radius: 5px;
-                border: 1px solid rgb(178, 178, 178);
+                border-top: 1px solid lightgray;
+                padding: 14px 20px;
                 align-items: center;
                 justify-content: space-between;
                 .detailsTable{
                     display: flex;
                     align-items: center;
+                    gap: 1rem;
+                    &__icon{
+                        font-size:24px;
+                        transform: rotate(25deg);
+                    }
+                    &__text{
+                        font-size:12px;
+                        color: rgb(94, 94, 94);
+                        margin: 0;
+                    }
                     &__value{
                         margin: 0;
+                        font-weight: bold;
+
                     }
                 }
             }
@@ -108,4 +130,24 @@ body {
             width: 100%;
         }
     }
+
+}
+@media only screen and (max-width: 950px){
+    .hourly-container{
+        .hours-section{
+            .accordion{
+                &__text1{
+                    .title{
+                        span{
+                            display: none;
+                        }
+                    }
+                }
+                &__text2{
+                    display: none;
+                }
+            }
+        }
+    }
+
 }
