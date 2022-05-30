@@ -14,7 +14,7 @@ const HourlyForecast = () => {
       </div>
       <div className="hours-section">
         <h3>Sunday, 29 May</h3>
-        <div className="hour-section__acordion">
+        <div className="hours-section__acordion">
           <Collapsible trigger={
             <div className="accordion">
                 <div className="accordion__text1">
@@ -28,57 +28,22 @@ const HourlyForecast = () => {
                 <div className="accordion__text2">
                     <span>💧 1%</span>
                     <span>🌪️ NE 13 km/h</span>
-                    <span>^</span>
+                    <span className='dropdown-icon'>+</span>
                 </div>
             </div>
           }>
             <div className="accordion__details">
                 <div className="accordion__details__section">
                     <div className="detailsTable">
-                        <span>icons</span>
+                        <span className="detailsTable__icon">icons</span>
                         <span>
-                            <p>Feel like</p>
-                            <h6>30</h6>
+                            <p className="detailsTable__text">Feel like</p>
+                            <p className="detailsTable__value">30</p>
                         </span>
                     </div>
-                    <div className="detailsTable">
-                        <span>icons</span>
-                        <span>
-                            <p>Feel like</p>
-                            <h6>30</h6>
-                        </span>
-                    </div>
-                    <div className="detailsTable">
-                        <span>icons</span>
-                        <span>
-                            <p>Feel like</p>
-                            <h6>30</h6>
-                        </span>
-                    </div>
+
                 </div>
-                <div className="accordion__details__section">
-                    <div className="detailsTable">
-                        <span>icons</span>
-                        <span>
-                            <p>Feel like</p>
-                            <h6>30</h6>
-                        </span>
-                    </div>
-                    <div className="detailsTable">
-                        <span>icons</span>
-                        <span>
-                            <p>Feel like</p>
-                            <h6>30</h6>
-                        </span>
-                    </div>
-                    <div className="detailsTable">
-                        <span>icons</span>
-                        <span>
-                            <p>Feel like</p>
-                            <h6>30</h6>
-                        </span>
-                    </div>
-                </div>
+
             </div>
           </Collapsible>
         </div>

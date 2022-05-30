@@ -19,6 +19,71 @@ body {
     background-color: #1b4de4;
     color: #fff;
 }
+.hourly-container{
+    margin: 8px 50px;
+    .hours-section{
+        margin: 8px 50px;
+        &__acordion{
+            margin: 5px 20px;
+        }
+        .accordion{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 12px 24px;
+            border-radius: 15px;
+            color: rgb(75, 75, 75);
+
+            &__text1{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 50%;
+                .temp{
+                    font-weight: bold;
+                    font-size:16px;
+                }
+            }
+            &__text2{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 40%;
+                .dropdown-icon{
+                    font-weight: 500;
+                    font-size: 24px;
+                }
+
+            }
+
+        }
+        .accordion:hover{
+            .dropdown-icon{
+                transform: rotate(45deg);
+            }
+        }
+        .accordion__details{
+            &__section{
+                display: flex;
+                margin: 5px;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid rgb(178, 178, 178);
+                align-items: center;
+                justify-content: space-between;
+                .detailsTable{
+                    display: flex;
+                    align-items: center;
+                    &__value{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 @media only screen and (max-width: 1024px) {
     .current-weather {
