@@ -1,8 +1,10 @@
 import moment from "moment";
 import React from "react";
+import { useSelector } from "react-redux";
 import Collapsible from 'react-collapsible';
 import "./style.scss";
 const DailyForecast = ({ forecastDay }) => {
+  const temperature = useSelector((state) => state.temperature);
   const getDayFormat = (getDate) => {
     const day = moment(getDate, "YYYY-MM-DD");
     return day.format("dddd");
@@ -23,7 +25,7 @@ const DailyForecast = ({ forecastDay }) => {
           </div>
           <div className="text-2">
             <label className="description">{day?.day?.condition?.text}</label>
-            <label className="min-max">{day?.day?.avgtemp_f} °F</label>
+            <label className="min-max">{temperature === 'centigrade'?(`${day?.day?.avgtemp_c} °C`):(`${day?.day?.avgtemp_f} °F`)}</label>
           </div>
         </div>
        }>
@@ -50,7 +52,7 @@ const DailyForecast = ({ forecastDay }) => {
                </div>
                <div className="daily-details__item">
                  <label>Average Temperature:</label>
-                 <label>{day?.day?.avgtemp_f} °F</label>
+                 <label>{temperature === 'centigrade' ? (`${day?.day?.avgtemp_c} °C`):(`${day?.day?.avgtemp_f} °F`)}</label>
                </div>
                <div className="daily-details__item">
                  <label>Sunrise:</label>

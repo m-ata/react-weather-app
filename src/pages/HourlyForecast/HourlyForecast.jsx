@@ -4,6 +4,7 @@ import Collapsible from "react-collapsible";
 import { useSelector } from "react-redux";
 const HourlyForecast = () => {
     const WeatherData = useSelector(state => state.weather);
+    const temperature = useSelector((state) => state.temperature);
     const { location, forecast } = WeatherData;
     const forecastDay = forecast?.forecastday || [];
     const getTime = (splitTime) => {
@@ -31,7 +32,7 @@ const HourlyForecast = () => {
             <div className="accordion">
                 <div className="accordion__text1">
                     <span>{getTime(`${hours?.time}`)}</span>
-                    <span className="temp">{hours?.temp_f}° F</span>
+                    <span className="temp">{temperature === 'centigrade'?(`${hours?.temp_c}° C`):(`${hours?.temp_f}° F`)}</span>
                     <span className="title">
                         <img src={hours?.condition?.icon} alt=""  />
                         <span>{hours?.condition?.text}</span>
@@ -50,7 +51,7 @@ const HourlyForecast = () => {
                         <span className="detailsTable__icon">🌡️</span>
                         <span>
                             <p className="detailsTable__text">Feel like</p>
-                            <p className="detailsTable__value">{hours?.feelslike_f}° F</p>
+                            <p className="detailsTable__value">{temperature === 'centigrade' ? (`${hours?.feelslike_c}° C`) : (`${hours?.feelslike_f}° F`)}</p>
                         </span>
                     </div>
                     <div className="detailsTable">

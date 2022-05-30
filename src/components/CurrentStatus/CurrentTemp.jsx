@@ -1,9 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import CurrentWeatherDetails from "./CurrentWeatherDetails";
 import "./style.scss";
 const CurrentTemp = ({ currentWeather, WeatherImages }) => {
   const { location, current } = currentWeather;
-
+  const temperature = useSelector((state) => state.temperature);
   const getWeatherBackground = () => {
     const background = WeatherImages.find(
       (item) => item?.code === current?.condition?.code
@@ -34,12 +35,26 @@ const CurrentTemp = ({ currentWeather, WeatherImages }) => {
               className="currentStatus__temperature__icon"
             />
             <span className="currentStatus__temperature__details">
-              <h2 className="currentStatus__temperature__details__temp">
-                {current?.temp_f}°<span> F</span>
-              </h2>
-              <span className="currentStatus__temperature__details__feelLike">
-                Feel Like {current?.feelslike_f}°{" "}
-              </span>
+              {temperature === "centigrade" ? (
+                <>
+                  <h2 className="currentStatus__temperature__details__temp">
+                    {current?.temp_c}°<span> C</span>
+                  </h2>
+                  <span className="currentStatus__temperature__details__feelLike">
+                    Feel Like {current?.feelslike_c}° C{" "}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <h2 className="currentStatus__temperature__details__temp">
+                    {current?.temp_f}°<span> F</span>
+                  </h2>
+                  <span className="currentStatus__temperature__details__feelLike">
+                    Feel Like {current?.feelslike_f}° F{" "}
+                  </span>
+                </>
+              )}
+
               <span className="currentStatus__temperature__details__description">
                 {current?.condition?.text} sky
               </span>
